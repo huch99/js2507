@@ -11,12 +11,42 @@
         <img src="./images/coffee-pink.jpg" alt="커피잔" id="cup" width="200px" height="200px">
     </div>
 
+    <div class="container">
+        <img src="./images/kitty-1.png" alt="고양이그림" id="cat" width="200px" height="200px">
+    </div>
+
     <script>
         let heading = document.querySelector('#heading');
         let cup = document.querySelector('#cup');
 
         heading.onclick = () => heading.innerHTML = '추천! 오늘의 커피';
         cup.onclick = () => cup.src = './images/coffee-blue.jpg';
+
+        let cat = document.querySelector('#cat');
+        // cat.onclick = changePic;
+
+        // function changePic() {
+        //     cat.src = './images/kitty-2.png';
+        //     alert(`이미지파일: ${this.src}`);
+        // }
+        // cat.addEventListener("mouseover", changePic, false);
+        // cat.addEventListener("mouseout", originPic, false);
+
+        // function changePic() {
+        //     cat.src = './images/kitty-2.png';
+        // }
+
+        // function originPic() {
+        //     cat.src = './images/kitty-1.png';
+        // }
+
+        cat.addEventListener("mouseover", () => {
+            cat.src = './images/kitty-2.png';
+        });
+
+        cat.addEventListener("mouseout", () => {
+            cat.src = './images/kitty-1.png';
+        });
     </script>
 </body>
 </html>

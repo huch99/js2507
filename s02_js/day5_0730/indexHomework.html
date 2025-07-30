@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework 0730</title>
+
+    <style>
+        table,
+        tr,
+        td {
+            border: 1px solid #000;
+        }
+
+        tr,
+        td {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" name="num1" id="num1" placeholder="숫자입력">
+    <input type="button" value="생성" id="submitBtn">
+
+    <div id="table"></div>
+
+    <div id="result"></div>
+
+    <script>
+        let submit = document.getElementById('submitBtn');
+        let tableArea = document.getElementById('table');
+
+        submit.onclick = function makeTable() {
+            tableArea.innerHTML = "";
+
+            let userNum = document.getElementById('num1').value;
+            let totalNum = parseInt(userNum);
+
+            let tableRow = Math.ceil(totalNum / 5);
+
+            let count = 1;
+
+            let table = document.createElement('table');
+
+            for (let i = 0; i < tableRow; i++) {
+                let tr = document.createElement('tr');
+
+                for (let j = 0; j < 5; j++) {
+                    let td = document.createElement('td');
+                    if (count <= totalNum) {
+                        td.innerText = `${count}번 자리`;
+                        count++;
+                    }
+                    else {
+                        td.innerHTML = "";
+                    }
+                    tr.appendChild(td);
+                }
+
+                table.appendChild(tr);
+            }
+            tableArea.appendChild(table);
+
+            tableArea.innerHTML += "<input type='button' id='randomBtn' value='자리뽑기'>";
+            document.getElementById('randomBtn').addEventListener('click', pickRandomSeat);
+        }
+
+        function pickRandomSeat() {
+            const cells = document.querySelectorAll('#table td');
+            if (cells.length === 0) {
+                alert("표에 셀들이 없습니다.");
+                return;
+            }
+
+            // 이전 셀 배경색 초기화
+            cells.forEach(cell => {
+                cell.style.backgroundColor = '';
+            });
+
+            const randomIndex = Math.floor(Math.random() * cells.length);
+            const selectedCell = cells[randomIndex];
+
+            // 배경색 바꾸기
+            selectedCell.style.backgroundColor = 'yellow';
+        }
+
+
+    </script>
+</body>
+
+</html>
