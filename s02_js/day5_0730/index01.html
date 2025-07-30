@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+
+        for (let i = 0; i < 10; i++) {
+            if (i < 9) {
+                document.write(i + ",");
+            }
+            else {
+                document.write(i + "<br>");
+            }
+        }
+
+        const cars = ["BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보"];
+
+        for (let i = 0; i < cars.length; i++) {
+            if (i < (cars.length - 1)) {
+                document.write((i+1+". ") + cars[i] + "<hr>");
+            }
+            else {
+                document.write((i+1+". ") +cars[i]);
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
