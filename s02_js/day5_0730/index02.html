@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
+        setInterval(checkTime, 1000);
+        setInterval(niceday, 1000);
         let myHour = new Date().getHours();
 
-        document.querySelector('body').innerHTML = myHour;
+        function checkTime() {
+            let now = new Date();
+            let current = now.toLocaleTimeString();
+            document.querySelector('body').innerHTML = current;
+        }
 
+        function niceday() {
+
+            if (myHour < 18) {
+                document.querySelector('body').innerHTML += "<br>좋은 하루 되세요!";
+            }
+
+            else {
+                document.querySelector('body').innerHTML += "<br>수고하셨습니다.";
+            }
+
+        }
     </script>
 </body>
+
 </html>
