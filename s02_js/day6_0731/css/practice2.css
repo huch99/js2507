@@ -1,0 +1,48 @@
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+#main {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    border: 1px solid #000;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+}
+
+.aside {
+    width: 0;
+    height: 100%;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+li:hover {
+    cursor: pointer;
+}
