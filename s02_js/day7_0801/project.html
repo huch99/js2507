@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 대비 연습</title>
+
+    <link rel="stylesheet" href="./css/project.css">
+</head>
+
+<body>
+    <!-- 이름, 날짜, 시간, 연락처  -->
+    <div id="userInfo">
+        <ul>
+            <li> 이름 :
+                <input type="text" id="userName" autofocus required>
+            </li>
+
+            <li> 날짜 :
+                <input type="date" id="userDate" required>
+            </li>
+
+            <li> 시간 :
+                <input type="time" id="userTime" step="3600" disabled required>
+            </li>
+
+            <li> 연락처 :
+                <input type="tel" id="userTel" required>
+            </li>
+
+            <li>
+                <button id="resultBtn">예약하기</button>
+                <button id="resetBtn">취소하기</button>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div id="popup" style="display:none; position:fixed; top:20px; left:50%; transform:translateX(-50%); background-color:#fff; padding:15px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:9999;">
+    <span id="popupMessage"></span>
+    <button id="closePopup" style="margin-left:10px;">닫기</button>
+</div>
+
+    <script src="./js/project.js"></script>
+</body>
+
+</html>
