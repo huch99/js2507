@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            text-align: center;
+        }
+
+        input {
+            border: 1px grey;
+            border-style: none none solid none;
+            font-size: 20px;
+            padding: 10px 20px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid grey;
+            border-radius: 15px;
+            background-color: #fff;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        ul {
+            width: 500px;
+            height: 700px;
+            margin: 20px auto;
+            border: 1px solid grey;
+            border-radius: 15px;
+            padding: 20px;
+            
+            list-style-type: none;
+
+        }
+
+        li {
+            border-bottom: 1px solid grey;
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .delBtn {
+            font-size: 15px;
+            border: none;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>할 일 목록</h1>
+
+    <input type="text" id="toDo" placeholder="할 일을 입력하세요.">
+    <button onclick="makeList()">입력</button>
+
+    <div >
+        <ul id="toDoListArea">
+
+        </ul>
+    </div>
+    <script src="./js/index0804.js"></script>
+</body>
+</html>
