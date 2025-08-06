@@ -16,7 +16,9 @@ div {
     grid-template-rows: repeat(7, 100px);
 
 }
-
+h1 {
+    text-align: center;
+}
 .logo {
     width: 200px;
 
