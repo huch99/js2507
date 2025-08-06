@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    border: 1px solid #000;
+}
+
+.container {
+    width: 1000px;
+    height: 650px;
+    margin: 0 auto;
+}
+
+.aside {
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+.logo {
+    width: 100%;
+    height: 100px;
+}
+
+.sideMenu {
+    width: 100%;
+    height: 550px;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    width: 180px;
+    text-align: center;
+}
+
+li {
+    width: 180px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+
+.mainBox {
+    width: 798px;
+    height: 100%;
+    float: right;
+}
+
+.imgSlide {
+    width: 100%;
+    height: 350px;
+}
+
+.section {
+    width: 100%;
+    height: 200px;
+}
+
+.sectionBox {
+    width: 33.33%;
+    height: 100%;
+    float: left;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+}
+
+.logo2 {
+    width: 150px;
+    height: 100%;
+    float: left;
+}
+
+.footerBox {
+    width: 644px;
+    height: 100%;
+    float: right;
+}
+
+.footMenu {
+    width: 100%;
+    height: 50%;
+}
+
+.copyright {
+    width: 100%;
+    height: 50%;
+}
