@@ -1,0 +1,122 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(12, 100px);
+    grid-template-rows: repeat(7, 100px);
+    margin: 50px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    border: 1px solid #000;
+}
+/* 헤더 */
+
+.logo {
+    width: 200px;
+
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.topMenu {
+    width: 1000px;
+
+    position: relative;
+
+    grid-column: 3/13;
+    grid-row: 1/2;
+}
+
+.topMenu ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
+
+.topMenu ul > li {
+    border: 1px solid #000;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+/* 이미지 슬라이드 */
+.imgSlide {
+    width: 1200px;
+    grid-column: 1/13;
+    grid-row: 2/5;
+
+}
+
+/* 섹션 */
+
+.sectionBox1 {
+    width: 400px;
+    height: 100%;
+    grid-column: 1/5;
+    grid-row: 5/7;
+
+}
+
+.sectionBox2 {
+    width: 400px;
+    height: 100%;
+    grid-column: 5/9;
+    grid-row: 5/7;
+
+}
+
+.sectionBox3 {
+    width: 400px;
+    height: 100%;
+    grid-column: 9/13;
+    grid-row: 5/7;
+
+}
+
+/* 푸터 */
+
+.footerBox {
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-column: 3/13;
+    grid-row: 7/8;
+
+}
+
+.logo2 {
+    width: 200px;
+    grid-column: 1/3;
+    grid-row: 7/8;
+}
+
+
+.copyright {
+    width: 100%;
+    height: 50%;
+
+}
+
+.footerMenu {
+    width: 100%;
+    height: 50%;
+}
+
+
+
