@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <style>
+        #panel {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+    </ul>
+
+    <div id="panel">dsadsa</div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        // $(document).ready(function() {
+        //     $('p').click(function(){
+        //         $(this).hide();
+        //     });
+        // });
+        
+        $('li').click(function() {
+            $('#panel').slideToggle();
+        });
+
+    </script>
+</body>
+</html>
