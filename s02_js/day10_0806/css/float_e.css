@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    border: 1px solid #000;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.main {
+    width: 100%;
+    height: calc(100% - 120px);
+}
+
+.aside {
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+.section {
+    width: 400px;
+    height: 100%;
+    float: left;
+}
+
+.sectionBox1 {
+    width: 100%;
+    height: 15%;
+}
+
+.sectionBox2 {
+    width: 100%;
+    height: 30%;
+}
+
+.sectionBox3 {
+    width: 100%;
+    height: 30%;
+}
+
+.sectionBox4 {
+    width: 100%;
+    height: 25%;
+}
+
+.img {
+    width: calc(100% - 600px);
+    height: 100%;
+    float: left;
+}
+
+.footer {
+    width: 100%;
+    height: 120px;
+}
+
+.logo2 {
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+.footerBox {
+    width: calc(100% - 200px);
+    height: 100%;
+    float: left;
+}
+
+.footLink {
+    width: 100%;
+    height: 50%;
+}
+
+.footerAdress {
+    width: 100%;
+    height: 50%;
+}
