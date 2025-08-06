@@ -10,7 +10,9 @@
 
     margin: 50px auto;
 }
-
+h1 {
+    text-align: center;
+}
 /* 헤더 */
 
 .header {
