@@ -6,7 +6,8 @@ let myData = [
     {link: "./s02_js/day5_0730/index0730.html", day: "5", date: "0730"},
     {link: "./s02_js/day6_0731/index0731.html", day: "6", date: "0731"},
     {link: "./s02_js/day7_0801/index0801.html", day: "7", date: "0801"},
-     {link: "./s02_js/day8_0804/index0804.html", day: "8", date: "0804"}
+     {link: "./s02_js/day8_0804/index0804.html", day: "8", date: "0804"},
+     {link: "./s02_js/day10_0806/index0806.html", day: "10", date: "0806"}
 ];
 
 for (let i=0; i < myData.length; i++) {
