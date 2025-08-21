@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
 
-    <!-- <button onclick="document.getElementById('demo').innerHTML = Date()">
+        <div class="main">
+            <!-- <button onclick="document.getElementById('demo').innerHTML = Date()">
         버튼을 눌러주세요.
     </button>
     <p id="demo"></p> -->
 
-    <!-- <h2>자바스크립트의 바디</h2>
+            <!-- <h2>자바스크립트의 바디</h2>
 
     <p id="demo"></p>
 
@@ -22,17 +30,21 @@
         document.getElementById('demo').innerHTML = "나의 첫번째 자바스크립트";
     </script> -->
 
-    <h2>자바스크립트 함수</h2>
+            <h2>자바스크립트 함수</h2>
 
-    <p id="demo">문단.</p>
+            <p id="demo">문단.</p>
 
-    <button id="but" onclick="myFunction()">눌러</button>
+            <button id="but" onclick="myFunction()">눌러</button>
+        </div>
+    </div>
+
+
 
     <script>
         function myFunction() {
-            document.getElementById('demo').innerHTML 
-            = "문단 전환";
-            
+            document.getElementById('demo').innerHTML
+                = "문단 전환";
+
         }
     </script>
 </body>

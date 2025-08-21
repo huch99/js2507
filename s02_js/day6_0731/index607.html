@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>random 활용 로또 추첨기</title>
 
+    <link rel="stylesheet" href="../../index.css">
+
     <style>
-        h1 {
+        .main h1 {
             text-align: center;
         }
+
         button {
             display: block;
             margin: auto;
@@ -26,7 +30,7 @@
             width: 700px;
             height: 300px;
             box-sizing: border-box;
-            padding-top: 125px; 
+            padding-top: 125px;
         }
 
         .number {
@@ -39,10 +43,23 @@
         }
     </style>
 </head>
+
 <body>
-    <h1>로또 추첨기</h1>
-    <button onclick="lottoN()">번호 추첨</button>
-    <div id="result"></div>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <h1>로또 추첨기</h1>
+            <button onclick="lottoN()">번호 추첨</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+
     <script src="./js/index607.js"></script>
 </body>
+
 </html>

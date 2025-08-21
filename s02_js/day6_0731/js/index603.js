@@ -53,7 +53,8 @@ if (currentRow.children.length > 0) {
 }
 
 // 6. 표를 문서에 추가
-document.body.appendChild(table);
+const root = document.querySelector('.main');
+root.appendChild(table);
 
 
 

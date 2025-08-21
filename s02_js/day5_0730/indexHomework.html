@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homework 0730</title>
 
+    <link rel="stylesheet" href="../../index.css">
+
     <style>
         table,
         tr,
@@ -21,12 +23,22 @@
 </head>
 
 <body>
-    <input type="number" name="num1" id="num1" placeholder="숫자입력">
-    <input type="button" value="생성" id="submitBtn">
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
 
-    <div id="table"></div>
-
-    <div id="result"></div>
+        <div class="main">
+            <input type="number" name="num1" id="num1" placeholder="숫자입력">
+            <input type="button" value="생성" id="submitBtn">
+        
+            <div id="table"></div>
+        
+            <div id="result"></div>
+        </div>
+    </div>
+    
 
     <script>
         let submit = document.getElementById('submitBtn');

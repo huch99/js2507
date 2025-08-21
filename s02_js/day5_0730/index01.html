@@ -6,31 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="../../index.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            
+        </div>
+    </div>
+    
     <script>
 
         for (let i = 0; i < 10; i++) {
             if (i < 9) {
-                document.write(i + ",");
+                document.querySelector('.main').innerHTML += i + ", ";
             }
             else {
-                document.write(i + "<br>");
+                document.querySelector('.main').innerHTML += i + "<br>";
             }
         }
 
-        const cars = ["BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보","BMW", "벤츠", "아우디", "피아트", "볼보"];
+        const cars = ["BMW", "벤츠", "아우디", "피아트", "볼보"];
 
         for (let i = 0; i < cars.length; i++) {
             if (i < (cars.length - 1)) {
-                document.write((i+1+". ") + cars[i] + "<hr>");
+                document.querySelector('.main').innerHTML += cars[i] + ', ';
             }
             else {
-                document.write((i+1+". ") +cars[i]);
+                document.querySelector('.main').innerHTML += cars[i];
             }
             
         }

@@ -7,34 +7,46 @@
     <title>프로젝트 대비 연습</title>
 
     <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="../../index.css">
 </head>
 
 <body>
-    <!-- 이름, 날짜, 시간, 연락처  -->
-    <div id="userInfo">
-        <ul>
-            <li> 이름 :
-                <input type="text" id="userName" autofocus required>
-            </li>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
 
-            <li> 날짜 :
-                <input type="date" id="userDate" required>
-            </li>
+        <div class="main">
+            <div id="userInfo">
+                <ul>
+                    <li> 이름 :
+                        <input type="text" id="userName" autofocus required>
+                    </li>
+        
+                    <li> 날짜 :
+                        <input type="date" id="userDate" required>
+                    </li>
+        
+                    <li> 시간 :
+                        <input type="time" id="userTime" step="3600" disabled required>
+                    </li>
+        
+                    <li> 연락처 :
+                        <input type="tel" id="userTel" required>
+                    </li>
+        
+                    <li>
+                        <button id="resultBtn">예약하기</button>
+                        <button id="resetBtn">취소하기</button>
+                    </li>
+                </ul>
+            </div>
 
-            <li> 시간 :
-                <input type="time" id="userTime" step="3600" disabled required>
-            </li>
-
-            <li> 연락처 :
-                <input type="tel" id="userTel" required>
-            </li>
-
-            <li>
-                <button id="resultBtn">예약하기</button>
-                <button id="resetBtn">취소하기</button>
-            </li>
-        </ul>
+        </div>
     </div>
+    <!-- 이름, 날짜, 시간, 연락처  -->
+    
 
 
 

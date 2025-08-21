@@ -11,6 +11,6 @@ let myData = [
 ];
 
 for (let i=0; i < myData.length; i++) {
-    document.querySelector('#myData').innerHTML
-    += `<li><a href=${myData[i].link} target='_blank'>${myData[i].day}일차 js_${myData[i].date}</a></li>`;
+    document.querySelector('#root').innerHTML
+    += `<tr><td>${myData[i].date}</td><td><a href='${myData[i].link}' target='_blank'>${myData[i].date}과제</a></td></tr>`;
 }

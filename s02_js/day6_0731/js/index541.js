@@ -1,8 +1,22 @@
+const main = document.querySelector('.main');
+
 for (let i = 1; i < 10; i++) {
-    document.writeln('<div class = "box">');
-    document.writeln(`<h3>${i}단</h3>`);
+    const box = document.createElement('div');
+    box.className = 'box';
+
+    const h3 = document.createElement('h3');
+    h3.innerText = `${i}단`;
+    box.appendChild(h3);
+
     for (let j = 1; j < 10; j++) {
-        document.writeln(`${i} X ${j} = ${i*j}<br>`);
+        const span = document.createElement('span');
+        span.innerText = `${i} X ${j} = ${i * j}`;
+        box.appendChild(span);
     }
-    document.writeln('</div>');
+
+    main.appendChild(box); // 각 구구단 박스를 main에 추가
 }
+
+
+
+
