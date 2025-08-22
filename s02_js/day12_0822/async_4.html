@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <div id="root"></div>
+
+            <hr>
+
+            <pre>
+
+                &lt;script&gt;
+                    const root = document.querySelector('#root');
+        
+                    function rocketReady(rocketName) {
+                        return new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                                const result = Math.random() > 0.3;
+                                root.innerHTML += `result: ${result} &lt;br&gt;`;
+
+                                if(result) {
+                                    resolve(`${rocketName} 발사 완료`);
+                                } else {
+                                    reject(`${rocketName} 발사 실패`);
+                                }
+                            }, 3000)
+                        });
+                    }
+
+                    rocketReady('나로호')
+                        .then((response) => {
+                            root.innerHTML += `성공: ${response} &lt;br&gt;`;
+                        })
+                        .catch((response) => {
+                            root.innerHTML += `실패: ${response} &lt;br&gt;`;
+                        })
+                        .finally((response) => {
+                            root.innerHTML += '우주 발사체 테스트 완료';
+                        });
+                &lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        const root = document.querySelector('#root');
+
+        function rocketReady(rocketName) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const result = Math.random() > 0.3;
+                    root.innerHTML += `result: ${result} <br>`;
+
+                    if (result) {
+                        resolve(`${rocketName} 발사 완료`);
+                    } else {
+                        reject(`${rocketName} 발사 실패`);
+                    }
+                }, 3000)
+            });
+        }
+
+        rocketReady('나로호')
+            .then((response) => {
+                root.innerHTML += `성공: ${response} <br>`;
+            })
+            .catch((response) => {
+                root.innerHTML += `실패: ${response} <br>`;
+            })
+            .finally((response) => {
+                root.innerHTML += '우주 발사체 테스트 완료';
+            });
+    </script>
+</body>
+
+</html>

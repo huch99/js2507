@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <div id="root"></div>
+
+            <hr>
+
+            <pre>
+
+                &lt;script&gt;
+                    const root = document.querySelector('#root');
+                    const ramyeon = () => (new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            root.innerHTML += 'A. 라면 장보기' + '&lt;br&gt;';
+                            root.innerHTML += 'B. 라면 물 끓이기' + '&lt;br&gt;';
+                            resolve('라면 장보기 완료');
+                        }, 1000);
+                    }));
+
+                    const coffee = () => (new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            root.innerHTML += 'E. 커피 장보기' + '&lt;br&gt;';
+                            root.innerHTML += 'F. 커피 물 끓이기' + '&lt;br&gt;';
+                            reject('커피 품절');
+                        }, 500);
+                    }));
+
+                    const promiseFuciton = async () => {
+                        try {
+                            const result = await ramyeon();
+                            root.innerHTML += result + '&lt;br&gt;';
+                            root.innerHTML += 'C. 끓는 물에 라면, 스프 넣고, 익히기' + '&lt;br&gt;';
+                            root.innerHTML += 'D. 라면 완성 후 시식하기' + '&lt;br&gt;';
+                            root.innerHTML += '==========================' + '&lt;br&gt;';
+                        } catch (result) {
+                            root.innerHTML += result + '&lt;br&gt;';
+                            root.innerHTML += '라면 만들기 중단' + '&lt;br&gt;';
+                            return;
+                        }
+
+                        try {
+                            const result = await coffee();
+                            root.innerHTML += 'G. 끓는 물에 커피 넣고 , 젖기' + '&lt;br&gt;';
+                            root.innerHTML += 'H. 커피 완성 후 마시기' + '&lt;br&gt;';
+                        } catch (result) {
+                            root.innerHTML += result + '&lt;br&gt;';
+                            root.innerHTML += '커피 만들기 중단' + '&lt;br&gt;';
+                        }
+                    };
+
+                    promiseFuciton();
+                &lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        const root = document.querySelector('#root');
+        const ramyeon = () => (new Promise((resolve, reject) => {
+            setTimeout(() => {
+                root.innerHTML += 'A. 라면 장보기' + '<br>';
+                root.innerHTML += 'B. 라면 물 끓이기' + '<br>';
+                resolve('라면 장보기 완료');
+            }, 1000);
+        }));
+
+        const coffee = () => (new Promise((resolve, reject) => {
+            setTimeout(() => {
+                root.innerHTML += 'E. 커피 장보기' + '<br>';
+                root.innerHTML += 'F. 커피 물 끓이기' + '<br>';
+                reject('커피 품절');
+            }, 500);
+        }));
+
+        const promiseFuciton = async () => {
+            try {
+                const result = await ramyeon();
+                root.innerHTML += result + '<br>';
+                root.innerHTML += 'C. 끓는 물에 라면, 스프 넣고, 익히기' + '<br>';
+                root.innerHTML += 'D. 라면 완성 후 시식하기' + '<br>';
+                root.innerHTML += '==========================' + '<br>';
+            } catch (result) {
+                root.innerHTML += result + '<br>';
+                root.innerHTML += '라면 만들기 중단' + '<br>';
+                return;
+            }
+
+            try {
+                const result = await coffee();
+                root.innerHTML += 'G. 끓는 물에 커피 넣고 , 젖기' + '<br>';
+                root.innerHTML += 'H. 커피 완성 후 마시기' + '<br>';
+            } catch (result) {
+                root.innerHTML += result + '<br>';
+                root.innerHTML += '커피 만들기 중단' + '<br>';
+            }
+        };
+
+        promiseFuciton();
+    </script>
+</body>
+
+</html>

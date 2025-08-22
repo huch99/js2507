@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <div id="root"></div>
+
+            <hr>
+
+            <pre>
+
+                &lt;script&gt;
+                    const root = document.querySelector('#root');
+        
+                    // 라면 장보기 성공일 경우
+                    const ramyeon = new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            root.innerHTML += 'A. 라면 장보기' + '&lt;br&gt;';
+                            root.innerHTML += 'B. 라면 물 끓이기' + '&lt;br&gt;';
+                            resolve('라면 장보기 완료');
+                        }, 1000);
+                    });
+
+                    ramyeon
+                        .then((result) => {
+                            root.innerHTML += result + '&lt;br&gt;';
+                            root.innerHTML += 'C. 끓는 물에 라면, 스프 넣고, 익히기' + '&lt;br&gt;';
+                            root.innerHTML += 'D. 라면 완성 후 시식하기' + '&lt;br&gt;';
+                            root.innerHTML += '=================================' + '&lt;br&gt;';
+                        })
+                        .catch((result) => {
+                            root.innerHTML += result + '&lt;br&gt;';
+                            root.innerHTML += '라면 만들기 중단' + '&lt;br&gt;';
+                        })
+
+                    const coffee = new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            root.innerHTML += 'E. 커피 장보기' + '&lt;br&gt;';
+                            root.innerHTML += 'F. 커피 물 끓이기' + '&lt;br&gt;';
+                            reject('커피 품절');
+                        }, 1000);
+                    });        
+
+                    coffee
+                        .then((result) => {
+                            root.innerHTML += 'G. 끓는 물에 커피 넣고, 젖기' + '&lt;br&gt;';
+                            root.innerHTML += 'H. 커피 완성 후 마시기' + '&lt;br&gt;';
+                        })
+                        .catch((result) => {
+                            root.innerHTML += result + '&lt;br&gt;';
+                            root.innerHTML += '커피 만들기 중단' + '&lt;br&gt;';
+                            root.innerHTML += '=================================' + '&lt;br&gt;';
+                        });
+
+                    const pasta = new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            root.innerHTML += 'no result' + '&lt;br&gt;';
+                        }, 1000);
+                    });
+
+                    // Promise 결과를 출력하는 함수
+                    function showPromiseResult(promise, label) {
+                        promise
+                            .then((result) => {
+                                root.innerHTML += `${label} 성공: ${result}<br>`;
+                            })
+                            .catch((error) => {
+                                root.innerHTML += `${label} 실패: ${error}<br>`;
+                            });
+                    }
+
+                    // 1초 후에 Promise 결과를 보여주기 위해 사용
+                    setTimeout(() => {
+                        showPromiseResult(ramyeon, '라면 장보기 : ');
+                        showPromiseResult(coffee, '커피 장보기 : ');
+                        showPromiseResult(pasta, '파스타 장보기 : ');
+                    }, 1000);
+
+                    setTimeout(() => {
+                        root.innerHTML += `라면 장보기 : ${ramyeon} &lt;br&gt;`;
+                        root.innerHTML += `커피 장보기 : ${coffee} &lt;br&gt;`;
+                        root.innerHTML += `파스타 장보기 : ${pasta} &lt;br&gt;`;
+                    }, 1000);    
+                &lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        const root = document.querySelector('#root');
+
+        // 라면 장보기 성공일 경우
+        const ramyeon = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                root.innerHTML += 'A. 라면 장보기' + '<br>';
+                root.innerHTML += 'B. 라면 물 끓이기' + '<br>';
+                resolve('라면 장보기 완료');
+            }, 1000);
+        });
+
+        ramyeon
+            .then((result) => {
+                root.innerHTML += result + '<br>';
+                root.innerHTML += 'C. 끓는 물에 라면, 스프 넣고, 익히기' + '<br>';
+                root.innerHTML += 'D. 라면 완성 후 시식하기' + '<br>';
+                root.innerHTML += '=================================' + '<br>';
+            })
+            .catch((result) => {
+                root.innerHTML += result + '<br>';
+                root.innerHTML += '라면 만들기 중단' + '<br>';
+            })
+
+        const coffee = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                root.innerHTML += 'E. 커피 장보기' + '<br>';
+                root.innerHTML += 'F. 커피 물 끓이기' + '<br>';
+                reject('커피 품절');
+            }, 1000);
+        });
+
+        coffee
+            .then((result) => {
+                root.innerHTML += 'G. 끓는 물에 커피 넣고, 젖기' + '<br>';
+                root.innerHTML += 'H. 커피 완성 후 마시기' + '<br>';
+            })
+            .catch((result) => {
+                root.innerHTML += result + '<br>';
+                root.innerHTML += '커피 만들기 중단' + '<br>';
+                root.innerHTML += '=================================' + '<br>';
+            });
+
+        const pasta = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                root.innerHTML += 'no result' + '<br>';
+            }, 1000);
+        });
+
+        // Promise 결과를 출력하는 함수
+        function showPromiseResult(promise, label) {
+            promise
+                .then((result) => {
+                    root.innerHTML += `${label} 성공: ${result}<br>`;
+                })
+                .catch((error) => {
+                    root.innerHTML += `${label} 실패: ${error}<br>`;
+                });
+        }
+
+        // 1초 후에 Promise 결과를 보여주기 위해 사용
+        setTimeout(() => {
+            showPromiseResult(ramyeon, '라면 장보기 : ');
+            showPromiseResult(coffee, '커피 장보기 : ');
+            showPromiseResult(pasta, '파스타 장보기 : ');
+        }, 1000);
+
+        setTimeout(() => {
+            root.innerHTML += `라면 장보기 : ${ramyeon} <br>`;
+            root.innerHTML += `커피 장보기 : ${coffee} <br>`;
+            root.innerHTML += `파스타 장보기 : ${pasta} <br>`;
+        }, 1000);
+    </script>
+</body>
+
+</html>
