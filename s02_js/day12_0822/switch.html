@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
+
+    <style>
+        button {
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <button onclick="go()">이동</button>
+
+            <hr>
+
+            <pre>
+
+                &lt;script&gt;
+                    let url;
+
+                    function go() {
+                        let site = prompt('가고싶은 사이트');
+                        switch (site) {
+                            case "구글": url = "www.google.com";
+                            break;
+                            case "다음": url = "www.daum.net";
+                            break;
+                            case "네이버": url = "www.naver.com";
+                            break;
+                            case "네이트": url = "www.nate.com";
+                            break;
+                            default: alert("보기 중에 없는 사이트입니다.");
+                        }
+
+                        if (url) location.href = 'https://' + url;
+                    }       
+                &lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        let url;
+
+        function go() {
+            let site = prompt('가고싶은 사이트');
+            switch (site) {
+                case "구글": url = "www.google.com";
+                    break;
+                case "다음": url = "www.daum.net";
+                    break;
+                case "네이버": url = "www.naver.com";
+                    break;
+                case "네이트": url = "www.nate.com";
+                    break;
+                default: alert("보기 중에 없는 사이트입니다.");
+            }
+
+            if (url) location.href = 'https://' + url;
+        }
+
+
+    </script>
+</body>
+
+</html>
