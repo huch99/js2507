@@ -24,7 +24,32 @@
             <pre>
 
                 &lt;script&gt;
-                    
+                    const root = document.querySelector('#root');
+                    const API_URL = "https://jsonplaceholder.typicode.com/users";
+
+                    function getFetchUsers() {
+                        root.innerHTML += 'Fetching Load Data...' + '&lt;br&gt;';
+
+                        fetch(API_URL)
+                            .then((response) => {
+                                root.innerHTML += response.status + '&lt;br&gt;';
+                                if(!response.ok) {
+                                    throw new Error(`응답오류! 상태 : ${response.status}`);
+                                }
+                                return response.json();
+                            })
+                            .then((users) => {
+                                users.slice(0,3).forEach((user, index) => {
+                                    root.innerHTML += `${index + 1}. ${user.name} (${user.email}) &lt;br&gt;`;
+                                });
+                            })
+                            .catch((error) => {
+                                // 네트워크 또는 처리 오류시 실행
+                                console.error('Error fetching users: ', error.message);
+                            });
+                    };
+
+                    getFetchUsers();
                 &lt;/script&gt;
             </pre>
         </div>
@@ -32,8 +57,31 @@
 
     <script>
         const root = document.querySelector('#root');
+        const API_URL = "https://jsonplaceholder.typicode.com/users";
 
-        
+        function getFetchUsers() {
+            root.innerHTML += 'Fetching Load Data...' + '<br>';
+
+            fetch(API_URL)
+                .then((response) => {
+                    root.innerHTML += response.status + '<br>';
+                    if(!response.ok) {
+                        throw new Error(`응답오류! 상태 : ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then((users) => {
+                    users.slice(0,3).forEach((user, index) => {
+                        root.innerHTML += `${index + 1}. ${user.name} (${user.email}) <br>`;
+                    });
+                })
+                .catch((error) => {
+                    // 네트워크 또는 처리 오류시 실행
+                    console.error('Error fetching users: ', error.message);
+                });
+        };
+
+        getFetchUsers();
     </script>
 </body>
 
