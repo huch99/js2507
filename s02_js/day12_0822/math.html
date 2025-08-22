@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <div id="root"></div>
+
+            <hr>
+
+            <pre>
+                
+                &lt;script&gt;
+                    let num1 = 10;
+                    let num2 = 5;
+
+                    const root = document.querySelector('#root');
+
+                    root.innerHTML += `덧셈 : ${num1} + ${num2} = ${num1 + num2} &lt;br&gt;`;
+                    root.innerHTML += `뺄셈 : ${num1} - ${num2} = ${num1 - num2} &lt;br&gt;`;
+                    root.innerHTML += `곱셈 : ${num1} * ${num2} = ${num1 * num2} &lt;br&gt;`;
+                    root.innerHTML += `나눗셈 : ${num1} / ${num2} = ${num1 / num2}`;
+                &lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        let num1 = 10;
+        let num2 = 5;
+
+        const root = document.querySelector('#root');
+
+        root.innerHTML += `덧셈 : ${num1} + ${num2} = ${num1 + num2} <br>`;
+        root.innerHTML += `뺄셈 : ${num1} - ${num2} = ${num1 - num2} <br>`;
+        root.innerHTML += `곱셈 : ${num1} * ${num2} = ${num1 * num2} <br>`;
+        root.innerHTML += `나눗셈 : ${num1} / ${num2} = ${num1 / num2}`;
+    </script>
+</body>
+</html>

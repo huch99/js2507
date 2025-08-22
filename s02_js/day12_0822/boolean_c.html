@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <div id="root"></div>
+
+            <hr>
+
+            <pre>
+                
+                &lt;script&gt;
+                    var a = [true, 'a'];
+                    var b = [false, 'b'];
+                    var c = [10 > 5, 'c'];
+                    var d = [Boolean(null), 'd'];
+
+                    let myA = [a,b,c,d];
+
+                    const root = document.getElementById('root');
+
+                    for (let i = 0; i < myA.length; i++) {
+                        root.innerHTML += `${myA[i][1]}값 : ` + myA[i][0] + '&lt;br&gt;';
+                    }
+                &lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var a = [true, 'a'];
+        var b = [false, 'b'];
+        var c = [10 > 5, 'c'];
+        var d = [Boolean(null), 'd'];
+
+        let myA = [a, b, c, d];
+
+        const root = document.getElementById('root');
+
+        for (let i = 0; i < myA.length; i++) {
+            root.innerHTML += `${myA[i][1]}값 : ` + myA[i][0] + '<br>';
+        }
+    </script>
+</body>
+
+</html>

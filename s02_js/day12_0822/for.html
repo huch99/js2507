@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
+
+    <style>
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+        .aqua {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <div id="root"></div>
+
+            <hr>
+
+            <pre>
+                
+                &lt;script&gt;
+                    const root = document.querySelector('#root');
+
+                    for(let i = 1; i <= 100; i++) {
+                        if(i % 5 == 0 && i% 7 != 0) {
+                            root.innerHTML += `&lt;span class = 'red'&gt; ${i} &lt;/span&gt;`;
+                        } else if (i % 7 == 0 && i % 5 != 0) {
+                            root.innerHTML += `&lt;span class = 'green'&gt; ${i} &lt;/span&gt;`;
+                        } else if (i % 5 == 0 && i % 7 == 0) {
+                            root.innerHTML += `&lt;span class = 'aqua'&gt; ${i} &lt;/span&gt;`;
+                        } else {
+                            root.innerHTML += `&lt;span&gt; ${i} &lt;/span&gt;`;
+                        }
+                    }
+                &lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const root = document.querySelector('#root');
+
+        for(let i = 1; i <= 100; i++) {
+            if(i % 5 == 0 && i% 7 != 0) {
+                root.innerHTML += `<span class = 'red'> ${i} </span>`;
+            } else if (i % 7 == 0 && i % 5 != 0) {
+                root.innerHTML += `<span class = 'green'> ${i} </span>`;
+            } else if (i % 5 == 0 && i % 7 == 0) {
+                root.innerHTML += `<span class = 'aqua'> ${i} </span>`;
+            } else {
+                root.innerHTML += `<span> ${i} </span>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

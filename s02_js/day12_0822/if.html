@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>정희찬</h1>
+            <h1>Javascript</h1>
+        </div>
+
+        <div class="main">
+            <div id="root"></div>
+
+            <hr>
+
+            <pre>
+                
+                &lt;script&gt;
+                    const root = document.querySelector('#root');
+
+                    let walkAmount = prompt('당신의 하루 걷는 양은 몇 보인가요?', '0');
+
+                    if(walkAmount > 10000) {
+                        root.innerHTML = '매우 좋은 습관을 지니고 계시는군요!!';
+                    } else {
+                        root.innerHTML = '좀 더 걸으세요.';
+                    }
+                &lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const root = document.querySelector('#root');
+
+        let walkAmount = prompt('당신의 하루 걷는 양은 몇 보인가요?', '0');
+
+        if(walkAmount > 10000) {
+            root.innerHTML = '매우 좋은 습관을 지니고 계시는군요!!';
+        } else {
+            root.innerHTML = '좀 더 걸으세요.';
+        }
+    </script>
+</body>
+
+</html>
